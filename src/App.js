@@ -5,7 +5,7 @@ import axios from "axios";
 import { baseURL } from "./helpers/apiCall";
 
 import Navbar from "./components/Navbar";
-import Input from "./components/Input";
+import Input from "./components/InputComponent/Input";
 
 import Footer from "./components/Footer";
 
