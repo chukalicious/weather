@@ -6,6 +6,7 @@ import { baseURL } from "./helpers/apiCall";
 
 import Navbar from "./components/Navbar";
 import Input from "./components/InputComponent/Input";
+import WeatherContainer from "./components/WeatherComponent";
 
 import Footer from "./components/Footer";
 
@@ -28,6 +29,7 @@ function App() {
     <div>
       <Navbar />
       <Input />
+      <WeatherContainer />
       <Footer />
     </div>
   );
