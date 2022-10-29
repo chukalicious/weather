@@ -4,6 +4,11 @@ import { themeChange } from "theme-change";
 import axios from "axios";
 import { baseURL } from "./helpers/apiCall";
 
+import Navbar from "./components/Navbar";
+import Input from "./components/Input";
+
+import Footer from "./components/Footer";
+
 function App() {
   useEffect(() => {
     themeChange(false);
@@ -19,7 +24,13 @@ function App() {
       .catch((err) => console.log(err));
   }, []);
 
-  return <div></div>;
+  return (
+    <div>
+      <Navbar />
+      <Input />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
