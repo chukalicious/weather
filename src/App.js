@@ -10,6 +10,8 @@ import WeatherContainer from "./components/WeatherComponent";
 
 import Footer from "./components/Footer";
 
+import MapContainer from "./components/MapComponent";
+
 function App() {
   useEffect(() => {
     themeChange(false);
@@ -19,9 +21,9 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        `${baseURL}latitude=34.08&longitude=-118.15&hourly=temperature_2m&daily=weathercode,sunrise,sunset&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=America%2FLos_Angeles`
+        `${baseURL}latitude=51.5002&longitude=-0.1262&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=America%2FLos_Angeles`
       )
-      .then((res) => console.log("res: ", res))
+      .then((res) => console.log("res: ", res.data))
       .catch((err) => console.log(err));
   }, []);
 
@@ -29,6 +31,7 @@ function App() {
     <div>
       <Navbar />
       <Input />
+      <MapContainer />
       <WeatherContainer />
       <Footer />
     </div>
