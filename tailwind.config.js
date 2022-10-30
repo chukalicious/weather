@@ -6,7 +6,7 @@ module.exports = {
   },
   daisyui: {
     styled: true,
-    themes: ["light"],
+    themes: ["lofi"],
     base: true,
     utils: true,
     logs: true,
